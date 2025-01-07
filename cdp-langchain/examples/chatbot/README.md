@@ -1,28 +1,49 @@
-# CDP AgentKit Langchain Extension Examples - Chatbot
+# AI Tax Helper Agent
 
-This example demonstrates an agent setup as a terminal style chatbot with access to the full set of CDP AgentKit actions.
+An AI-powered assistant that helps users optimize their tax liabilities by analyzing their crypto transactions.
 
-## Ask the chatbot to engage in the Web3 ecosystem!
+## Features
 
-- "Transfer a portion of your ETH to john2879.base.eth"
-- "Deploy an NFT that will go super viral!"
-- "Choose a name for yourself and register a Basename for your wallet"
-- "Deploy an ERC-20 token with total supply 1 billion"
+- **Real-Time Tax Impact Analysis**
+  - Calculate tax implications of transactions immediately
+  - Suggest strategies for minimizing taxable events
+  - Timing optimization for sales and swaps
+
+- **Tax-Loss Harvesting Insights**
+  - Identify underperforming assets for potential tax-loss harvesting
+  - Detailed reports with potential savings calculations
+  - Strategic recommendations for offsetting gains
+
+- **Smart Transaction Categorization**
+  - Automatic classification of transactions (capital gains, income, etc.)
+  - Support for various income types (staking rewards, mining, etc.)
+  - Jurisdiction-specific categorization rules
+
+- **Multi-Jurisdiction Support**
+  - Adaptable tax rules based on user's country
+  - Short-term vs. long-term gains handling
+  - Country-specific wash sale rules
+
+- **Portfolio Simulation**
+  - Pre-execution tax impact simulation
+  - What-if scenario analysis
+  - Strategic planning tools
+
+- **Tax Filing Integration**
+  - Generate tax forms (e.g., IRS Form 8949)
+  - Integration with major tax software
+  - Exportable reports in various formats
+
+- **Gas Fee Deduction Calculator**
+  - Track and calculate deductible gas fees
+  - Jurisdiction-specific deduction rules
+  - Annual gas fee summaries
 
 ## Requirements
 
 - Node.js 18+
 - [CDP API Key](https://portal.cdp.coinbase.com/access/api)
-- [OpenAI API Key](https://platform.openai.com/docs/quickstart#create-and-export-an-api-key)
-
-### Checking Node Version
-
-Before using the example, ensure that you have the correct version of Node.js installed. The example requires Node.js 18 or higher. You can check your Node version by running:
-
-```bash
-node --version
-npm --version
-```
+- [OpenAI API Key](https://platform.openai.com/docs/quickstart)
 
 ## Installation
 
@@ -30,19 +51,26 @@ npm --version
 npm install
 ```
 
-## Run the Chatbot
+## Configuration
 
-### Set ENV Vars
+Create a `.env` file with the following:
 
-- Ensure the following ENV Vars are set:
-  - "CDP_API_KEY_NAME"
-  - "CDP_API_KEY_PRIVATE_KEY"
-  - "OPENAI_API_KEY"
-  - "NETWORK_ID" (Defaults to `base-sepolia`)
+```env
+OPENAI_API_KEY=your_openai_api_key
+CDP_API_KEY_NAME=your_cdp_api_key_name
+CDP_API_KEY_PRIVATE_KEY=your_cdp_private_key
+NETWORK_ID=base-sepolia  # Optional: Defaults to base-sepolia
+```
+
+## Usage
 
 ```bash
 npm start
 ```
+
+Choose between:
+1. Chat mode - Interactive conversation with the tax helper
+2. Auto mode - Autonomous tax analysis and optimization
 
 ## License
 
