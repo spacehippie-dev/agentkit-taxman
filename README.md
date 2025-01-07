@@ -1,60 +1,94 @@
-# CDP AgentKit.js
+# AI Tax Helper Agent
 
-[![npm downloads](https://img.shields.io/npm/dm/@coinbase/cdp-agentkit-core?style=flat-square)](https://www.npmjs.com/package/@coinbase/cdp-agentkit-core)
-[![GitHub star chart](https://img.shields.io/github/stars/coinbase/cdp-agentkit-nodejs?style=flat-square)](https://star-history.com/#coinbase/cdp-agentkit-nodejs)
-[![Open Issues](https://img.shields.io/github/issues-raw/coinbase/cdp-agentkit-nodejs?style=flat-square)](https://github.com/coinbase/cdp-agentkit-nodejs/issues)
+[![GitHub](https://img.shields.io/github/license/spacehippie-dev/agentkit-taxman?style=flat-square)](LICENSE.md)
 
-The **Coinbase Developer Platform (CDP) AgentKit for Node.js** simplifies bringing your AI Agents onchain. Every AI Agent deserves a crypto wallet!
+An AI-powered assistant that helps users optimize their crypto tax liabilities by analyzing their transactions using the Coinbase Developer Platform (CDP) AgentKit.
+
+## Overview
+
+The Tax Helper Agent is designed to simplify crypto tax management by providing real-time analysis, optimization suggestions, and automated reporting capabilities. Built on top of CDP AgentKit, it combines the power of AI with blockchain interaction to deliver comprehensive tax insights.
 
 ## Key Features
-- **Framework-agnostic**: Common AI Agent primitives that can be used with any AI framework.
-- **LangChain.js integration**: Seamless integration with [LangChain.js](https://js.langchain.com/docs/introduction/) for easy agentic workflows. More frameworks coming soon!
-- **Twitter (X) integration**: Seamless integration of Langchain with [Twitter (X)](https://developer.twitter.com/en/docs/twitter-api) for easy agentic workflows.
-- **Support for various on-chain actions**:
 
-  - Faucet for testnet funds
-  - Getting wallet details and balances
-  - Transferring and trading tokens
-  - Registering [Basenames](https://www.base.org/names)
-  - Deploying [ERC-20](https://www.coinbase.com/learn/crypto-glossary/what-is-erc-20) tokens
-  - Deploying [ERC-721](https://www.coinbase.com/learn/crypto-glossary/what-is-erc-721) tokens and minting NFTs
-  - Buying and selling [Zora Wow](https://wow.xyz/) ERC-20 coins
-  - Deploying tokens on [Zora's Wow Launcher](https://wow.xyz/mechanics) (Bonding Curve)
-  
-  Or [add your own](./CONTRIBUTING.md#adding-an-action-to-agentkit-core)!
+- **Real-Time Tax Impact Analysis**
+  - Calculate tax implications of transactions immediately
+  - Suggest strategies for minimizing taxable events
+  - Timing optimization for sales and swaps
 
-## Examples
-Check out [cdp-langchain/examples](./cdp-langchain/examples) for inspiration and help getting started!
-- [Chatbot](./cdp-langchain/examples/chatbot/README.md): Simple example of a Chatbot that can perform complex onchain interactions, using OpenAI.
+- **Tax-Loss Harvesting Insights**
+  - Identify underperforming assets for potential tax-loss harvesting
+  - Detailed reports with potential savings calculations
+  - Strategic recommendations for offsetting gains
 
-## Repository Structure
-CDP AgentKit Node.js is organized as a [monorepo](https://en.wikipedia.org/wiki/Monorepo) that contains multiple packages.
+- **Smart Transaction Categorization**
+  - Automatic classification of transactions (capital gains, income, etc.)
+  - Support for various income types (staking rewards, mining, etc.)
+  - Jurisdiction-specific categorization rules
 
-### @coinbase/cdp-agentkit-core
-Core primitives and framework-agnostic tools that are meant to be composable and used via CDP AgentKit framework extensions (ie, `cdp-langchain`).
-See [CDP AgentKit Core](./cdp-agentkit-core/README.md) to get started!
+- **Multi-Jurisdiction Support**
+  - Adaptable tax rules based on user's country
+  - Short-term vs. long-term gains handling
+  - Country-specific wash sale rules
 
-### @coinbase/cdp-langchain
-LangChain.js Toolkit extension of CDP AgentKit. Enables agentic workflows to interact with onchain actions.
-See [CDP LangChain](./cdp-langchain/README.md) to get started!
+- **Portfolio Simulation**
+  - Pre-execution tax impact simulation
+  - What-if scenario analysis
+  - Strategic planning tools
 
-### @coinbasetwitter-langchain
-Langchain Toolkit extension for Twitter (X). Enables agentic workflows to interact with Twitter, such as to post a tweet.
-See [Twitter Langchain](./twitter-langchain/README.md) to get started!
+- **Tax Filing Integration**
+  - Generate tax forms (e.g., IRS Form 8949)
+  - Integration with major tax software
+  - Exportable reports in various formats
 
-## Contributing
-CDP AgentKit welcomes community contributions.
-See [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
+- **Gas Fee Deduction Calculator**
+  - Track and calculate deductible gas fees
+  - Jurisdiction-specific deduction rules
+  - Annual gas fee summaries
 
-## Security and bug reports
-The CDP AgentKit team takes security seriously.
-See [SECURITY.md](SECURITY.md) for more information.
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- [CDP API Key](https://portal.cdp.coinbase.com/access/api)
+- [OpenAI API Key](https://platform.openai.com/docs/quickstart)
+
+### Installation
+
+```bash
+npm install
+```
+
+### Configuration
+
+Create a `.env` file with the following:
+
+```env
+OPENAI_API_KEY=your_openai_api_key
+CDP_API_KEY_NAME=your_cdp_api_key_name
+CDP_API_KEY_PRIVATE_KEY=your_cdp_private_key
+NETWORK_ID=base-sepolia  # Optional: Defaults to base-sepolia
+```
+
+### Usage
+
+```bash
+npm start
+```
+
+Choose between:
+1. Chat mode - Interactive conversation with the tax helper
+2. Auto mode - Autonomous tax analysis and optimization
 
 ## Documentation
+
+For detailed information about using the Tax Helper Agent, check out:
 - [CDP AgentKit Documentation](https://docs.cdp.coinbase.com/agentkit/docs/welcome)
-- [API Reference: CDP AgentKit Core](https://coinbase.github.io/cdp-agentkit-nodejs/cdp-agentkit-core/index.html)
-- [API Reference: CDP AgentKit LangChain Extension](https://coinbase.github.io/cdp-agentkit-nodejs/cdp-langchain/index.html)
-- [API Reference: CDP Agentkit Twitter Langchain Extension](https://coinbase.github.io/cdp-agentkit-nodejs/twitter-langchain/index.html)
+- [OpenAI API Documentation](https://platform.openai.com/docs)
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
